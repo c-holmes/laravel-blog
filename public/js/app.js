@@ -990,8 +990,25 @@ window.Vue = __webpack_require__(35);
 Vue.component('example-component', __webpack_require__(38));
 
 var app = new Vue({
-  el: '#app'
+	el: '#app'
 });
+
+function fadeOut(element) {
+	var op = 1; // initial opacity
+	var timer = setInterval(function () {
+		if (op <= 0.1) {
+			clearInterval(timer);
+		}
+		element.style.opacity = op;
+		op -= 0.1;
+	}, 50);
+}
+
+var alertSelector = document.getElementById('flash-message');
+if (alertSelector) {
+	fadeOut(alertSelector);
+	//window.setTimeout(hideAlertMessage(alertSelector), 500);
+}
 
 /***/ }),
 /* 11 */
@@ -1052,6 +1069,23 @@ if (token) {
 //     cluster: 'mt1',
 //     encrypted: true
 // });
+
+function fadeOut(element) {
+  var op = 1; // initial opacity
+  var timer = setInterval(function () {
+    if (op <= 0.1) {
+      clearInterval(timer);
+    }
+    element.style.opacity = op;
+    op -= 0.1;
+  }, 50);
+}
+
+var alertSelector = document.getElementById('flash-message');
+if (alertSelector) {
+  fadeOut(alertSelector);
+  //window.setTimeout(hideAlertMessage(alertSelector), 500);
+}
 
 /***/ }),
 /* 12 */

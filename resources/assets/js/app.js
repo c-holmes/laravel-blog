@@ -20,3 +20,19 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+function fadeOut(element) {
+	var op = 1;  // initial opacity
+	var timer = setInterval(function () {
+	    if (op <= 0.1){
+	        clearInterval(timer);
+	    }
+	    element.style.opacity = op;
+	    op -= 0.1;
+	}, 50);
+}
+
+var alertSelector = document.getElementById('flash-message');
+if (alertSelector){
+	fadeOut(alertSelector);
+}
