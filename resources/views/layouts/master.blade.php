@@ -35,9 +35,7 @@
         </div><!-- /.blog-main -->
 
         <aside class="col-sm-3 ml-sm-auto blog-sidebar">
-					@include ('layouts.sidebar.about')
-          @include ('layouts.sidebar.archive')
-					@include ('layouts.sidebar.share')
+					@include ('layouts.sidebar')
         </aside><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
@@ -45,6 +43,6 @@
     </main><!-- /.container -->
 
 		@include ('layouts.footer')
-    <script src="/js/app.js?vers1.1"></script>
+    <script src="/js/app.js?vers1.2"></script>
   </body>
 </html>
